@@ -35,3 +35,14 @@
   .today-pill{font-size:10px}
   .brand small{letter-spacing:1px}
 }
+
+/* Missao 4 - ajuste fino de contraste sem alterar estrutura visual. */
+.nav-caption{color:#8ba3b8}
+.breadcrumb{color:#56687b}
+.highlight-card p{color:#d5e4ee}
+.budget-amount span{color:#5f7382}
+.budget-bottom span{color:#5e727f}
+.budget-bottom strong{color:#1c7a5e}
+.transaction-head span{color:#5f7080}
+.transaction-value{color:#a54f40}
+footer{color:#5f6f7d}

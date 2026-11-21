@@ -4,7 +4,7 @@
 
 | Categoria | Antes | Depois |
 |---|---|---|
-| Acessibilidade | 89 | 95 |
+| Acessibilidade | 89 | 100 |
 | Boas práticas | 100 | 100 |
 | SEO | 90 | 100 |
 
@@ -18,7 +18,7 @@
 
 ## O que foi corrigido (1 ou 2 linhas)
 
-Corrigidos rótulos de campos, descrição SEO, contraste de textos auxiliares e o transbordamento horizontal das transações em telas de 375 px.
+Corrigidos rótulos de campos, contraste de textos (incluindo tabela, rodapé e orçamento), descrição SEO e o nome acessível da marca; também foi preservado o ajuste de layout para 375 px sem overflow.
 
 ## O que o agente fez aqui que o webfetch não faria? (1 ou 2 linhas)
 

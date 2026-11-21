@@ -66,7 +66,7 @@ function render() {
   root.innerHTML = `
     <div class="app-shell">
       <aside class="sidebar">
-        <a class="brand" href="/" aria-label="Bolso Claro, início">
+        <a class="brand" href="/">
           <span class="brand-symbol" aria-hidden="true">↗</span>
           <span>bolso<span class="brand-light">claro</span><small>SEU DINHEIRO EM ORDEM</small></span>
         </a>
