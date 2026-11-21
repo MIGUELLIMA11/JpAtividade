@@ -4,15 +4,15 @@
 
 | Categoria | Antes | Depois |
 |---|---|---|
-| Acessibilidade | Pendente | Pendente |
-| Boas práticas | Pendente | Pendente |
-| SEO | Pendente | Pendente |
+| Acessibilidade | A medir | A medir |
+| Boas práticas | A medir | A medir |
+| SEO | A medir | A medir |
 
 > **Missão 2:** o Lighthouse não pôde ser executado neste ambiente, portanto as notas **Antes** permanecem pendentes. Problemas de rótulos, descrição SEO e contraste foram identificados por inspeção, não por uma auditoria Lighthouse.
 
 ## O que foi corrigido (1 ou 2 linhas)
 
-_Pendente de execução da missão 4._
+Corrigidos rótulos de campos, descrição SEO, contraste de textos auxiliares e o transbordamento horizontal das transações em telas de 375 px.
 
 ## O que o agente fez aqui que o webfetch não faria? (1 ou 2 linhas)
 
