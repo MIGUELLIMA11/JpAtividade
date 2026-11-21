@@ -19,9 +19,11 @@
 
 ## Missão 3: viewport 375 × 667
 
-- Na versão inicial, a lista de transações possuía `min-width: 675px` até mesmo no breakpoint `max-width: 730px`. Essa largura é maior do que o viewport solicitado (375px), causando **excesso de largura horizontal**.
-- Não foi possível adicionar um gasto por automação neste ambiente, pois o Chromium não abriu a URL. `scripts/capture.mjs celular` está pronto para fazer isso em um Chrome/Chromium sem o bloqueio.
-- `prints/03-celular.png` deve ser produzido localmente usando o agente MCP (preferível, para a atividade) ou o script auxiliar do CDP.
+- Missão executada com `chrome-devtools` em `http://localhost:5173` com viewport ajustado para **375 × 667**.
+- Foi adicionado um gasto real no formulário: descrição `Despesa teste 50`, valor **R$ 50,00**, categoria padrão `Alimentação`.
+- Captura real gerada em `prints/03-celular.png`.
+- Não foi observado problema crítico de responsividade nessa execução: medição no navegador indicou `innerWidth = 375`, `clientWidth = 375`, `scrollWidth = 375` e nenhum elemento ultrapassando a largura do viewport.
+- Observação de UX: a lista de transações fica visualmente densa em 375px, mas sem quebra estrutural nem rolagem horizontal.
 
 ## Missão 4: correção implementada
 
@@ -36,4 +38,4 @@
 
 ### Evidência adicional da missão 3
 
-O teste foi planejado em `scripts/capture.mjs`: define dimensões 375 × 667 com `Emulation.setDeviceMetricsOverride`, preenche e salva um gasto de R$ 12,50 e captura a tela inteira. A execução foi bloqueada antes da interação, pela política do Chrome; não há um print autenticamente obtido para anexar nesta versão.
+Além da captura, a própria UI confirmou a inclusão do lançamento: total de registros subiu de 6 para 7 e a linha `Despesa teste 50` apareceu em `Últimas transações` com `− R$ 50,00`.
