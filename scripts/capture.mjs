@@ -5,6 +5,7 @@
  */
 import { spawn } from 'node:child_process';
 import { writeFile, mkdtemp, rm } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { setTimeout as pause } from 'node:timers/promises';
@@ -20,7 +21,12 @@ if (!modes[mode]) {
   process.exit(1);
 }
 const cfg = modes[mode];
-const browserPath = process.env.CHROME_BIN || 'chromium';
+const winPaths = [
+  `${process.env['PROGRAMFILES'] || 'C:\\Program Files'}\\Google\\Chrome\\Application\\chrome.exe`,
+  `${process.env['PROGRAMFILES(X86)'] || 'C:\\Program Files (x86)'}\\Google\\Chrome\\Application\\chrome.exe`,
+  `${process.env.LOCALAPPDATA || ''}\\Google\\Chrome\\Application\\chrome.exe`
+];
+const browserPath = process.env.CHROME_BIN || (process.platform === 'win32' ? (winPaths.find(existsSync) || 'chrome') : 'chromium');
 const port = 9300 + Math.floor(Math.random() * 500);
 const profile = await mkdtemp(join(tmpdir(), 'bolso-claro-browser-'));
 const browser = spawn(browserPath, [

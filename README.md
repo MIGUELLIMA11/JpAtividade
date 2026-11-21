@@ -35,9 +35,9 @@ O `opencode.json` já contém Context7 e `chrome-devtools`:
 
 ## Arquivos da atividade
 
-- `prints/01-inicio.png`: captura antes da correção.
-- `prints/03-celular.png`: captura no viewport 375 × 667, com gasto adicionado.
-- `prints/04-corrigido.png`: captura depois da correção.
+- `prints/01-inicio.png`: captura antes da correção (**a gerar no seu Chrome**, ou recuperar a versão do commit da missão 1).
+- `prints/03-celular.png`: captura no viewport 375 × 667, com gasto adicionado (**a gerar**).
+- `prints/04-corrigido.png`: captura depois da correção (**a gerar**).
 - `RESULTADO.md`: avaliação antes/depois e explicações.
 - `MISSOES.md`: prompts e passos para executar o Lighthouse no MCP.
 
@@ -48,3 +48,22 @@ npm run check
 ```
 
 O projeto é propositalmente didático: o histórico de Git preserva uma versão inicial e a correção de problemas concretos de acessibilidade, SEO e layout responsivo.
+
+## Testes e capturas auxiliares
+
+```bash
+npm run check
+npm run test
+```
+
+Depois de iniciar `npm run dev`, os seguintes comandos podem gerar PNGs usando Chrome/Chromium em um computador sem bloqueio de navegação:
+
+```bash
+npm run capture -- inicio
+npm run capture -- celular
+npm run capture -- corrigido
+```
+
+O script de captura usa Chrome DevTools Protocol diretamente. **Ele não é o MCP do OpenCode nem executa Lighthouse.** Para a entrega acadêmica, prefira executar os prompts de `MISSOES.md` via OpenCode, que usará `chrome-devtools` propriamente dito. Se o Chrome não for encontrado automaticamente no Windows, defina a variável `CHROME_BIN` com o caminho do `chrome.exe`.
+
+A captura `inicio` feita com o código corrigido **não equivale à evidência Antes**. Para reproduzir a tela original, use uma cópia do commit `86f03ed` (missão 1) ou execute o prompt da missão 1 sobre essa revisão. Depois retorne à última revisão para a captura corrigida.
