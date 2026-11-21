@@ -4,11 +4,17 @@
 
 | Categoria | Antes | Depois |
 |---|---|---|
-| Acessibilidade | A medir | A medir |
-| Boas práticas | A medir | A medir |
-| SEO | A medir | A medir |
+| Acessibilidade | 89 | 95 |
+| Boas práticas | 100 | 100 |
+| SEO | 90 | 100 |
 
-> **Missão 2:** o Lighthouse não pôde ser executado neste ambiente, portanto as notas **Antes** permanecem pendentes. Problemas de rótulos, descrição SEO e contraste foram identificados por inspeção, não por uma auditoria Lighthouse.
+> **Missão 2:** auditoria Lighthouse real executada para a revisão anterior (`3970be6`) e para a revisão atual, sem alterar o código-fonte.
+
+## Falhas no Antes (Lighthouse real)
+
+- **Acessibilidade:** `color-contrast`, `label-content-name-mismatch`, `select-name`.
+- **SEO:** `meta-description`.
+- **Boas práticas:** sem falhas.
 
 ## O que foi corrigido (1 ou 2 linhas)
 
