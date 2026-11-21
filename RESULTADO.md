@@ -8,7 +8,7 @@
 | Boas práticas | Pendente | Pendente |
 | SEO | Pendente | Pendente |
 
-> As notas devem ser preenchidas somente após executar o Lighthouse de verdade pelo Chrome/DevTools. Neste ambiente, não foi possível executar Lighthouse. Não são notas inventadas nem nota zero.
+> **Missão 2:** o Lighthouse não pôde ser executado neste ambiente, portanto as notas **Antes** permanecem pendentes. Problemas de rótulos, descrição SEO e contraste foram identificados por inspeção, não por uma auditoria Lighthouse.
 
 ## O que foi corrigido (1 ou 2 linhas)
 
