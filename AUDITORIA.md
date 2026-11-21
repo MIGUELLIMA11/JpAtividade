@@ -33,3 +33,7 @@
 - `prints/04-corrigido.png` depende de um Chrome/Chromium que abra a aplicação.
 
 > **Importante:** esta é uma auditoria técnica por inspeção do código e execução de verificações Node/HTTP, **não** um relatório Lighthouse. A conexão `chrome-devtools` no OpenCode também necessita validação local com `/mcps`.
+
+### Evidência adicional da missão 3
+
+O teste foi planejado em `scripts/capture.mjs`: define dimensões 375 × 667 com `Emulation.setDeviceMetricsOverride`, preenche e salva um gasto de R$ 12,50 e captura a tela inteira. A execução foi bloqueada antes da interação, pela política do Chrome; não há um print autenticamente obtido para anexar nesta versão.
