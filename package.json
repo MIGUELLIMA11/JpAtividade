@@ -1,0 +1,16 @@
+{
+  "name": "controle-gastos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Controle de gastos pessoal, responsivo e sem dependências externas.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check src/app.js && node --check server.mjs && node --check scripts/capture.mjs",
+    "capture": "node scripts/capture.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
