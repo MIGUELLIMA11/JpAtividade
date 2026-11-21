@@ -93,7 +93,7 @@ try {
   await command('Emulation.setDeviceMetricsOverride', {
     width: cfg.width, height: cfg.height, deviceScaleFactor: 1, mobile: cfg.mobile
   });
-  await command('Page.navigate', { url: process.env.APP_URL || 'http://localhost:5173' });
+  await command('Page.navigate', { url: process.env.APP_URL || 'http://127.0.0.1:5173' });
   let ready = false;
   for (let i = 0; i < 70; i++) {
     try {
@@ -102,7 +102,10 @@ try {
     } catch {}
     await pause(100);
   }
-  if (!ready) throw Error('Aplicação não carregou. Execute npm run dev em outro terminal.');
+  if (!ready) {
+    const debug = await evaluate('({url: location.href, title:document.title, body:document.body?.innerText?.slice(0,600)})').catch(e => ({error:String(e)}));
+    throw Error('Aplicação não carregou. Diagnóstico: '+JSON.stringify(debug)+' Logs: '+JSON.stringify(messages));
+  }
   await pause(350);
 
   if (mode !== 'inicio') {
